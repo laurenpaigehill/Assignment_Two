@@ -15,6 +15,7 @@
   padding: 10px;
   width: 400px;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .row {
@@ -24,17 +25,71 @@
 .key {
   width: 40px;
   height: 58px;
-  border: 1px solid black;
+  border: 0px;
+  padding: 0;
   border-radius: 4px;
   background-color: #d3d6da;
   text-align: center;
   line-height: 40px;
   margin-right: 5px;
   margin-bottom: 5px;
-  font-family: "nyt-franklin";
+  font-family: sans-serif;
   font-weight: bold;
   font-size: 1.25em;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+  
 }
+.backspace {
+  width: 50px;
+  height: 58px;
+  border: 0px;
+  padding: 0;
+  border-radius: 4px;
+  background-color: #d3d6da;
+  text-align: center;
+  line-height: 40px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 1.25em;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.enter {
+  width: 55px;
+  height: 58px;
+  border: 0px;
+  padding: 0;
+  border-radius: 4px;
+  background-color: #d3d6da;
+  text-align: center;
+  line-height: 40px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 0.80em;
+  display: flex;
+justify-content: center;
+align-items: center;
+text-transform: uppercase;
+}
+
+
+.key:hover {
+  background-color: #767c76; 
+  color: white;
+}
+
+.key:active {
+  background-color:  #767c76;
+  color: white;
+}
+
 
     </style>
 </head>
@@ -65,6 +120,7 @@
           <div class="key">L</div>
         </div>
         <div class="row">
+        <div class="enter">Enter</div>
           <div class="key">Z</div>
           <div class="key">X</div>
           <div class="key">C</div>
@@ -72,6 +128,7 @@
           <div class="key">B</div>
           <div class="key">N</div>
           <div class="key">M</div>
+          <div class="backspace"> <img id="backspace" src="backspace.png" width="50%" /></div>
         </div>
       </div>
       
