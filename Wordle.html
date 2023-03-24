@@ -1,155 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wordle</title>
 
-    <script>function change_bgcolour() {
-        document.body.style.background = "grey"; 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wordle</title>
+
+  <script>function change_bgcolour() {
+      document.body.style.background = "grey";
 
     }
 
-</script>
+  </script>
 
-    <style>
-
-.header{
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: row;
-}
-
-
-.logo {
-padding-left: 490px;
-padding-bottom: 10px;
-padding-top: 10px;
-}
-
-.nav {
-
-  padding-left: 10px;
-}
-
-.grid-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-  overflow: hidden;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-grid-gap: 5px;
- padding: 10px;
- box-sizing: border-box;
-
-}
-
-.grid-item {
-  border: 2px solid rgb(207, 207, 209);
- min-width: 60px;
- min-height: 60px;
- font
-}
+  <style>
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+    }
 
 
-.keyboard {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  width: 400px;
-  margin: 0 auto;
-  cursor: pointer;
-  justify-content: center;
-  align-items: center;
-}
 
-.row {
-  display: flex;
-}
+    .nav {
+      width: 180px;
+    }
 
-.key {
-  width: 40px;
-  height: 58px;
-  border: 0px;
-  padding: 0;
-  border-radius: 4px;
-  background-color: #d3d6da;
-  text-align: center;
-  line-height: 40px;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 1.25em;
-  display: flex;
-    justify-content: center;
-    align-items: center;
-  
-}
-.backspace {
-  width: 50px;
-  height: 58px;
-  border: 0px;
-  padding: 0;
-  border-radius: 4px;
-  background-color: #d3d6da;
-  text-align: center;
-  line-height: 40px;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  font-weight: bold;
-  font-size: 1.25em;
-  display: flex;
-    justify-content: center;
-    align-items: center;
-  
-}
-.enter {
-  width: 55px;
-  height: 58px;
-  border: 0px;
-  padding: 0;
-  border-radius: 4px;
-  background-color: #d3d6da;
-  text-align: center;
-  line-height: 40px;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: 0.80em;
-  display: flex;
-justify-content: center;
-align-items: center;
-text-transform: uppercase;
-}
+    .icons {
+      width: 180px;
+    }
 
-    </style>
+    .grid-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+      overflow: hidden;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 5px;
+      padding: 10px;
+      box-sizing: border-box;
+
+    }
+
+    .grid-item {
+      border: 2px solid rgb(207, 207, 209);
+      min-width: 60px;
+      min-height: 60px;
+
+    }
+
+
+    .keyboard {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      width: 400px;
+      margin: 0 auto;
+      cursor: pointer;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .row {
+      display: flex;
+    }
+
+    .key {
+      width: 40px;
+      height: 58px;
+      border: 0px;
+      padding: 0;
+      border-radius: 4px;
+      background-color: #d3d6da;
+      text-align: center;
+      line-height: 40px;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      font-family: sans-serif;
+      font-weight: bold;
+      font-size: 1.25em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+
+    }
+
+    .backspace {
+      width: 50px;
+      height: 58px;
+      border: 0px;
+      padding: 0;
+      border-radius: 4px;
+      background-color: #d3d6da;
+      text-align: center;
+      line-height: 40px;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      font-weight: bold;
+      font-size: 1.25em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1.5;
+
+    }
+
+    .enter {
+      width: 55px;
+      height: 58px;
+      border: 0px;
+      padding: 0;
+      border-radius: 4px;
+      background-color: #d3d6da;
+      text-align: center;
+      line-height: 40px;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      font-family: sans-serif;
+      font-weight: bold;
+      font-size: 0.80em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      flex: 1.5;
+    }
+  </style>
 </head>
+
 <body>
 
-  <div class = "header">
+  <div class="header">
 
-  <div class="nav"> <img id="nav" src="navigation bar.png" width="25%" /></div>
+    <div class="nav"> <img id="nav" src="navigation bar.png" height="60px" /></div>
 
-  <div class = "logo"><img id="logo" src="logo.png" width="15%" /></div></div> 
-
-<div>
-
-<hr>
+    <div class="logo"><img id="logo" src="logo.png" height="60px" /></div>
 
 
+    <div class="icons"><img id="icons" src="icons.png" height="60px" /></div>
+  </div>
+  <div>
 
-  <div class= 'grid-container'>
+    <hr>
 
-    <div class="grid">
+
+
+    <div class='grid-container'>
+
+      <div class="grid">
         <div class="grid-item"></div>
         <div class="grid-item"></div>
         <div class="grid-item"></div>
@@ -184,42 +190,43 @@ text-transform: uppercase;
     </div>
 
     <div class="keyboard">
-        <div class="row">
-          <div class="key">Q</div>
-          <div class="key">W</div>
-          <div class="key">E</div>
-          <div class="key">R</div>
-          <div class="key">T</div>
-          <div class="key">Y</div>
-          <div class="key">U</div>
-          <div class="key">I</div>
-          <div class="key">O</div>
-          <div class="key">P</div>
-        </div>
-        <div class="row">
-          <div class="key">A</div>
-          <div class="key">S</div>
-          <div class="key">D</div>
-          <div class="key">F</div>
-          <div class="key">G</div>
-          <div class="key">H</div>
-          <div class="key">J</div>
-          <div class="key">K</div>
-          <div class="key">L</div>
-        </div>
-        <div class="row">
-        <div class="enter">Enter</div>
-          <div class="key">Z</div>
-          <div class="key">X</div>
-          <div class="key">C</div>
-          <div class="key">V</div>
-          <div class="key">B</div>
-          <div class="key">N</div>
-          <div class="key">M</div>
-          <div class="backspace"> <img id="backspace" src="backspace.png" width="50%" /></div>
-        </div>
+      <div class="row">
+        <div class="key">Q</div>
+        <div class="key">W</div>
+        <div class="key">E</div>
+        <div class="key">R</div>
+        <div class="key">T</div>
+        <div class="key">Y</div>
+        <div class="key">U</div>
+        <div class="key">I</div>
+        <div class="key">O</div>
+        <div class="key">P</div>
       </div>
-      
-    
+      <div class="row">
+        <div class="key">A</div>
+        <div class="key">S</div>
+        <div class="key">D</div>
+        <div class="key">F</div>
+        <div class="key">G</div>
+        <div class="key">H</div>
+        <div class="key">J</div>
+        <div class="key">K</div>
+        <div class="key">L</div>
+      </div>
+      <div class="row">
+        <div class="enter">Enter</div>
+        <div class="key">Z</div>
+        <div class="key">X</div>
+        <div class="key">C</div>
+        <div class="key">V</div>
+        <div class="key">B</div>
+        <div class="key">N</div>
+        <div class="key">M</div>
+        <div class="backspace"> <img id="backspace" src="backspace.png" width="50%" /></div>
+      </div>
+    </div>
+
+
 </body>
+
 </html>
