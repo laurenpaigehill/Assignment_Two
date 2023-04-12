@@ -34,7 +34,16 @@ document.querySelector(".enter").addEventListener("click", function () {
 });
 
 function isCorrect() {
-  const dictionary = ["HELLO", "EARTH", "PLANE", "HOUSE", "AUDIO", "PHONE"];
+  const dictionary = [
+    "HELLO",
+    "EARTH",
+    "PLANE",
+    "HOUSE",
+    "AUDIO",
+    "PHONE",
+    "LAUGH",
+    "APPLE",
+  ];
 
   const randomWord = dictionary[Math.floor(Math.random() * dictionary.length)];
 
